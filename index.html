@@ -69,24 +69,46 @@
             font-weight: bold;
         }
 
-        .ProjectVidBox_ODD{
+        /* .ProjectVidBox_ODD{
             padding-left: 2%;
         }
         .ProjectVidBox_EVEN{
             padding-right: 2%;
-        }
+        } */
         .ProjectVid{
             border: solid white;
+            width: 100%;
+            height: 40rem;
+        }
+        .ProjectVideos figure{
+            flex: 1 1 0;      
+            min-width: 0;     
+            max-width: 50%;
+            margin: 0;
+        }
+        .ProjectVideos video{
+            width: 100%;
+            height: auto;
+            border: solid white; 
+        }
+        .VidCaption{
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: white;
+            font-size: 1.5rem;
+        }
+        .ProjectDesc{
+            margin-top: 1.5rem;
+            max-width: 85%;
         }
 
-        .ProjectNameBox_ODD{
+        /* .ProjectNameBox_ODD{
             text-align: start;
             padding-top: 2%;
             padding-left: 2%;
             border-bottom: white solid;
             width: 95%;
             transform: translate(2.2%);
-            /* 2.5% - 85% */
         }
         .ProjectNameBox_EVEN{
             text-align: end;
@@ -95,7 +117,15 @@
             border-bottom: white solid;
             width: 95%;
             transform: translate(3%);
-            /* 15.2% - 85% */
+        }  */
+        .ProjectNameBox{
+            text-align: center;
+            padding-top: 2%;
+            padding-left: 2%;
+            padding-right: 2%;
+            border-bottom: white solid;
+            width: 95%;
+            transform: translate(3%);
         }
         .ProjectName{
             color: #00fff7;
@@ -104,15 +134,24 @@
         
         /* Img Carousel */
         .ProjectImage{
-            width: 62.5rem;
+            /* width: 62.5rem;
             height: 35rem;
+            border: solid white; */
+            display: block;
+            width: 100%;
+            height: 35rem;
+            object-fit: contain;
             border: solid white;
         }
         .ProjectCarouselBox{
-            width: 65rem;
+            width: 100%;
             padding-top: 2%;
             padding-bottom: 3%;
-            padding-left: 43%;
+            /* padding-left: 43%; */
+        }
+        .ProjectCarouselBox .carousel{
+            width: 62.5rem;
+            max-width: 100%;   /* shrinks on small screens instead of overflowing */
         }
         
         /* Made to be unique because the Carousel differentiate using ID name */
@@ -145,7 +184,12 @@
             font-size: 1.15rem;
             color: white;
             text-align: center;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            padding-left: 2%;
+            padding-right: 2%;
         }
+
     </style>
 
     <title>My Portfolio</title>
@@ -199,9 +243,111 @@
                     <h1>Projects</h1>
                 </div>
 
+                <!-- Project AIScenario -->
+                <div class="d-flex flex-column mb-4">
+                    <div class="ProjectNameBox">
+                        <h2 class="ProjectName">AI Scenario</h2>
+                    </div>
+
+                    <!-- Project AIScenario Carousel -->
+                    <div class="ProjectCarouselBox d-flex justify-content-center">
+                        <div id="ProjectCarousel-AIScenario" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#ProjectCarousel-AIScenario" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#ProjectCarousel-AIScenario" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#ProjectCarousel-AIScenario" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                              <button type="button" data-bs-target="#ProjectCarousel-AIScenario" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                              <button type="button" data-bs-target="#ProjectCarousel-AIScenario" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                              <button type="button" data-bs-target="#ProjectCarousel-AIScenario" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                              <button type="button" data-bs-target="#ProjectCarousel-AIScenario" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            </div>
+                            
+                            <div class="carousel-inner">
+                              <div class="carousel-item active" >
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (AI Scenario)/Environment Selection Menu.png" alt="ImgEnvSelect">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (AI Scenario)/Actor Creation Menu.png" alt="ImgActorCreation">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (AI Scenario)/Story Creation Menu.png" alt="ImgStoryCreation">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (AI Scenario)/Story Creation Menu (Advanced Settings).png" alt="ImgStoryCreationAdvanced">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (AI Scenario)/Scene Editor Menu.png" alt="ImgSceneEditor">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (AI Scenario)/Create Scenario Prompt.png" alt="ImgCreateScenarioPrompt">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (AI Scenario)/Conversation History Menu.png" alt="ImgConversationHistory">
+                              </div>
+                            </div>
+    
+                            <button class="carousel-control-prev" type="button" data-bs-target="#ProjectCarousel-AIScenario" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#ProjectCarousel-AIScenario" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+    
+                        </div>
+                    </div>
+
+                    <!-- Project AIScenario Desc -->
+                    <div class="ProjectDescBox d-flex flex-column align-items-center">
+                        <!-- Project Vid -->
+                        <div class ="ProjectVideos d-flex justify-content-center gap-4 w-100">
+                            <figure>
+                                <figcaption class="VidCaption">AI Scenario Demo</figcaption>
+                                <iframe class="ProjectVid" src="https://drive.google.com/file/d/1CcWqfbC-v_kuc3fmNeO9T9HcqeWKTi1Z/preview" allow="autoplay" allowfullscreen></iframe>
+                            </figure>
+
+                            <figure>
+                                <figcaption class="VidCaption">UI Demo</figcaption>
+                                <iframe class="ProjectVid" src="https://drive.google.com/file/d/1CcWqfbC-v_kuc3fmNeO9T9HcqeWKTi1Z/preview" allow="autoplay" allowfullscreen></iframe>
+                            </figure>
+                            
+                            <!-- <figure>
+                                <figcaption class="VidCaption">AI Scenario Demo</figcaption>
+                                <video controls preload="metadata">
+                                    <source src="Assets/Videos/Project (AI Scenario)/Scenario 2 Demo.mp4" type="video/mp4">
+                                    Your browser doesn't support video.
+                                </video>
+                            </figure>
+
+                            <figure>
+                                <figcaption class="VidCaption">UI Demo</figcaption>
+                                    <video controls preload="metadata">
+                                        <source src="Assets/Videos/Project (AI Scenario)/UI Demo.mp4" type="video/mp4">
+                                        Your browser doesn't support video.
+                                    </video>
+                            </figure> -->
+                        </div>
+                        
+                        <div class="ProjectDesc">
+                            <h7>
+                                AI Scenario is a 3D project that's used to simulate a scenario where player will have to interact with trained AI. The current demo in the video is a scenario where 
+                                an AI Actor named Randy Lim a 36-year-old male was involved in a confrontation with a police officer during a routine check in the neighborhood. During that time
+                                panicked and became aggressive, injuring the officer and fleeing. The player will play the role of another officer who is investigating the report about Randy Lim.
+                                Based on how the player handle the interaction, the ending of the story could be different.
+                            </h7>
+                        </div>
+                    </div>
+
+                    <!-- Download Project AI Scenario Box -->
+                     <!-- Build won't be allowed to be downloaded, just in case because its a client's project
+                      -->
+
+                </div>
+
                 <!-- Project SeaURP -->
                 <div class="d-flex flex-column mb-4">
-                    <div class="ProjectNameBox_ODD">
+                    <div class="ProjectNameBox">
                         <h2 class="ProjectName">Sea Scene URP</h2>
                     </div>
 
@@ -217,16 +363,16 @@
                             
                             <div class="carousel-inner">
                               <div class="carousel-item active" >
-                                <img class="ProjectImage" src="Assets/Images/Project (Sea Scene URP)/Helicopter Scene.png" class="d-block w-100" alt="ImgHelicopter">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (Sea Scene URP)/Helicopter Scene.png" alt="ImgHelicopter">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (Sea Scene URP)/Human Comparison Scene.png" class="d-block w-100" alt="ImgHumanComparison">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (Sea Scene URP)/Human Comparison Scene.png" alt="ImgHumanComparison">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (Sea Scene URP)/Selection Scene.png" class="d-block w-100" alt="ImgSelectionScene">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (Sea Scene URP)/Selection Scene.png" alt="ImgSelectionScene">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (Sea Scene URP)/Start Scene.png" class="d-block w-100" alt="ImgStartScene">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (Sea Scene URP)/Start Scene.png" alt="ImgStartScene">
                               </div>
                             </div>
     
@@ -243,10 +389,21 @@
                     </div>
 
                     <!-- Project SeaURP Desc -->
-                    <div class="ProjectDescBox d-flex align-items-center">
+                    <div class="ProjectDescBox d-flex flex-column align-items-center">
                         <!-- Project Vid -->
-                        <div class="ProjectVidBox_ODD d-flex justify-content-center">
-                            <iframe class="ProjectVid" src="https://drive.google.com/file/d/1bOR3kXD85yPlg-GL4dyZ7hKBlJO9Bnv8/preview" width="800" height="400" allow="autoplay" allowfullscreen></iframe>
+                        <div class="ProjectVideos d-flex justify-content-center gap-4 w-100">
+                            <figure>
+                                <figcaption class="VidCaption">Sea Scene URP Demo</figcaption>
+                                <iframe class="ProjectVid" src="https://drive.google.com/file/d/1bOR3kXD85yPlg-GL4dyZ7hKBlJO9Bnv8/preview" allow="autoplay" allowfullscreen></iframe>
+                            </figure>
+                            
+                            <!-- <figure>
+                                <figcaption class="VidCaption">Sea Scene URP Demo</figcaption>
+                                <video controls preload="metadata">
+                                    <source src="Assets/Videos/Project (Sea Scene URP)/Sea Scene URP Demo.mp4" type="video/mp4">
+                                    Your browser doesn't support video.
+                                </video>
+                            </figure> -->
                         </div>
                         
                         <div class="ProjectDesc">
@@ -273,9 +430,10 @@
                 </div>
 
                 <!-- Project MirrorMulti -->
-                <div class="d-flex justify-content-start flex-column mb-4">
+                <!-- <div class="d-flex justify-content-start flex-column mb-4"> -->
+                <div class="d-flex flex-column mb-4"></div>
                     <!-- Project Name -->
-                    <div class="ProjectNameBox_EVEN">
+                    <div class="ProjectNameBox">
                         <h2 class="ProjectName">Mirror Multiplayer</h2>
                     </div>
                     
@@ -289,13 +447,13 @@
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active" >
-                                <img class="ProjectImage" src="Assets/Images/Project (Mirror Multiplayer)/Main Menu.png" class="d-block w-100" alt="ImgMainMenu">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (Mirror Multiplayer)/Main Menu.png" alt="ImgMainMenu">
                                 </div>
                                 <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (Mirror Multiplayer)/Player Name Menu.png" class="d-block w-100" alt="ImgPlayerName">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (Mirror Multiplayer)/Player Name Menu.png" alt="ImgPlayerName">
                                 </div>
                                 <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (Mirror Multiplayer)/Playground 1 + Portal.png" class="d-block w-100" alt="ImgPlayground">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (Mirror Multiplayer)/Playground 1 + Portal.png" alt="ImgPlayground">
                                 </div>
                             </div>
     
@@ -311,7 +469,22 @@
                     </div>
 
                     <!-- Project MirrorMulti Desc -->
-                    <div class="ProjectDescBox d-flex align-items-center">
+                    <div class="ProjectDescBox d-flex flex-column align-items-center">
+                        <!-- Project Vid -->
+                        <div class="ProjectVideos d-flex justify-content-center gap-4 w-100">
+                            <figure>
+                                <figcaption class="VidCaption">Sea Scene URP Demo</figcaption>
+                                <iframe class="ProjectVid" src="https://drive.google.com/file/d/1qQj_rE-PKtQviAMJBvr-Lb8ssAvnlxMm/preview" allow="autoplay" allowfullscreen></iframe>
+                            </figure>
+                            <!-- <figure>
+                                <figcaption class="VidCaption">Mirror Multiplayer Gameplay Demo</figcaption>
+                                <video controls preload="metadata">
+                                    <source src="Assets/Videos/Project (Mirror Multiplayer)/Mirror Multiplayer Demo.mp4" type="video/mp4">
+                                    Your browser doesn't support video.
+                                </video>
+                            </figure> -->
+                        </div>
+
                         <div class="ProjectDesc">
                             <h7>
                                 Mirror Multiplayer is a prototype 3D multiplayer game where I make the base functions & features (such as Game Lobby, Character Controls, Mechanics, etc.) 
@@ -324,10 +497,6 @@
                             </h7>
                         </div>
                         
-                        <!-- Project Vid -->
-                        <div class="ProjectVidBox_EVEN d-flex justify-content-center">
-                            <iframe class="ProjectVid" src="https://drive.google.com/file/d/1qQj_rE-PKtQviAMJBvr-Lb8ssAvnlxMm/preview" width="800" height="400" allow="autoplay" allowfullscreen></iframe>
-                        </div>
                     </div>
 
                     <!-- Download Project MirrorMulti Box -->
@@ -342,7 +511,7 @@
                     
                 <!-- Project OSR -->
                 <div class="d-flex flex-column mb-4">
-                    <div class="ProjectNameBox_ODD">
+                    <div class="ProjectNameBox">
                         <h2 class="ProjectName">Oil Spill Response</h2>
                     </div>
 
@@ -359,19 +528,19 @@
                             
                             <div class="carousel-inner">
                               <div class="carousel-item active" >
-                                <img class="ProjectImage" src="Assets/Images/Project (OSR)/Main Menu.png" class="d-block w-100" alt="ImgMainMenu">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (OSR)/Main Menu.png" alt="ImgMainMenu">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (OSR)/Dialogue Scene.png" class="d-block w-100" alt="DialogueScene">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (OSR)/Dialogue Scene.png" alt="DialogueScene">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (OSR)/Interaction 1.png" class="d-block w-100" alt="Interaction1">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (OSR)/Interaction 1.png" alt="Interaction1">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (OSR)/Interaction 2.png" class="d-block w-100" alt="Interaction2">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (OSR)/Interaction 2.png" alt="Interaction2">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (OSR)/Task Complete.png" class="d-block w-100" alt="TaskComplete">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (OSR)/Task Complete.png" alt="TaskComplete">
                               </div>
                             </div>
     
@@ -388,11 +557,21 @@
                     </div>
 
                     <!-- Project OSR Desc -->
-                    <div class="ProjectDescBox d-flex align-items-center">
+                    <div class="ProjectDescBox d-flex flex-column align-items-center">
                         <!-- Project Vid -->
-                        <div class="ProjectVidBox_ODD d-flex justify-content-center">
+                        <div class="ProjectVideos d-flex justify-content-center gap-4 w-100">
                             <!-- (This is the Scenario Only) https://drive.google.com/file/d/1kPncqEtluNWzbTtkHRrIc6NWnvenok5X/preview -->
-                            <iframe class="ProjectVid" src="https://drive.google.com/file/d/1mbsHGgHrmsnsdk5yfBu7ROTDVf1ZjS5P/preview" width="800" height="400" allow="autoplay" allowfullscreen></iframe>
+                            <figure>
+                                <figcaption class="VidCaption">OSR Gameplay Demo</figcaption>
+                            <iframe class="ProjectVid" src="https://drive.google.com/file/d/1mbsHGgHrmsnsdk5yfBu7ROTDVf1ZjS5P/preview" allow="autoplay" allowfullscreen></iframe>
+                            </figure>
+                            <!-- <figure>
+                                <figcaption class="VidCaption">OSR Gameplay Demo</figcaption>
+                                <video controls preload="metadata">
+                                    <source src="Assets/Videos/Project (OSR)/OSR Demo (Windows Ver 1.1).mp4" type="video/mp4">
+                                    Your browser doesn't support video.
+                                </video>
+                            </figure> -->
                         </div>
                         
                         <div class="ProjectDesc">
@@ -409,7 +588,7 @@
 
                 <!-- Project CoreTurnBased -->
                 <div class="d-flex flex-column mb-4">
-                    <div class="ProjectNameBox_EVEN">
+                    <div class="ProjectNameBox">
                         <h2 class="ProjectName">Turn Based Core Mechanic</h2>
                     </div>
 
@@ -424,13 +603,13 @@
                             
                             <div class="carousel-inner">
                               <div class="carousel-item active" >
-                                <img class="ProjectImage" src="Assets/Images/Project (Turn-Based Core Mechanic)/Combat Scene.png" class="d-block w-100" alt="ImgMainMenu">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (Turn-Based Core Mechanic)/Combat Scene.png" alt="ImgMainMenu">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (Turn-Based Core Mechanic)/Player's Skill Desc.png" class="d-block w-100" alt="ImgGameScene">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (Turn-Based Core Mechanic)/Player's Skill Desc.png" alt="ImgGameScene">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (Turn-Based Core Mechanic)/Player Defending & Notification.png" class="d-block w-100" alt="ImgConversationScene">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (Turn-Based Core Mechanic)/Player Defending & Notification.png" alt="ImgConversationScene">
                               </div>
                             </div>
     
@@ -447,10 +626,20 @@
                     </div>
 
                     <!-- Project CoreTurnBased Desc -->
-                    <div class="ProjectDescBox d-flex align-items-center">
+                    <div class="ProjectDescBox d-flex flex-column align-items-center">
                         <!-- Project Vid -->
-                        <div class="ProjectVidBox_EVEN d-flex justify-content-center">
-                            <iframe class="ProjectVid" src="https://drive.google.com/file/d/17Eax_1q6WL0uXGLWLjNMlXCsWnJMm8Dp/preview" width="800" height="400" allow="autoplay" allowfullscreen></iframe>
+                        <div class="ProjectVideos d-flex justify-content-center gap-4 w-100">
+                            <figure>
+                                <figcaption class="VidCaption">Battle Demo</figcaption>
+                            <iframe class="ProjectVid" src="https://drive.google.com/file/d/17Eax_1q6WL0uXGLWLjNMlXCsWnJMm8Dp/preview" allow="autoplay" allowfullscreen></iframe>
+                            </figure>
+                            <!-- <figure>
+                                <figcaption class="VidCaption">Battle Demo</figcaption>
+                                <video controls preload="metadata">
+                                    <source src="Assets/Videos/Project (Turn-Based Core Mechanic)/Turn-Based Core Mechanic Demo.mp4" type="video/mp4">
+                                    Your browser doesn't support video.
+                                </video>
+                            </figure> -->
                         </div>
                         
                         <div class="ProjectDesc">
@@ -483,9 +672,9 @@
                 </div>
 
                 <!-- Project CoreRPG -->
-                <div class="d-flex ustify-content-start flex-column mb-4">
+                <div class="d-flex flex-column mb-4">
                     <!-- Project Name -->
-                    <div class="ProjectNameBox_ODD">
+                    <div class="ProjectNameBox">
                         <h2 class="ProjectName">RPG Core Mechanic</h2>
                     </div>
                     
@@ -501,19 +690,19 @@
                             </div>
                             <div class="carousel-inner">
                               <div class="carousel-item active">
-                                <img class="ProjectImage" src="Assets/Images/Project (RPG Core Mechanic)/Game Over Menu.png" class="d-block w-100" alt="GameOverMenu">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (RPG Core Mechanic)/Game Over Menu.png" alt="GameOverMenu">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (RPG Core Mechanic)/Night Time Post Processing Lightings.png" class="d-block w-100" alt="NightTime">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (RPG Core Mechanic)/Night Time Post Processing Lightings.png" alt="NightTime">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (RPG Core Mechanic)/Meteor Skill.png" class="d-block w-100" alt="MeteorSkill">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (RPG Core Mechanic)/Meteor Skill.png" alt="MeteorSkill">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (RPG Core Mechanic)/Meteor Skill Used.png" class="d-block w-100" alt="MeteorSkillUsed">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (RPG Core Mechanic)/Meteor Skill Used.png" alt="MeteorSkillUsed">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (RPG Core Mechanic)/Basic Attack - Fireball.png" class="d-block w-100" alt="BasicAtk">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (RPG Core Mechanic)/Basic Attack - Fireball.png" alt="BasicAtk">
                               </div>
                             </div>
     
@@ -529,7 +718,22 @@
                     </div>
 
                     <!-- Project CoreRPG Desc -->
-                    <div class="ProjectDescBox d-flex align-items-center">
+                    <div class="ProjectDescBox d-flex flex-column align-items-center">
+                        <!-- Project Vid -->
+                        <div class="ProjectVideos d-flex justify-content-center gap-4 w-100">
+                            <figure>
+                                <figcaption class="VidCaption">Character Controls  Demo</figcaption>
+                            <iframe class="ProjectVid" src="https://drive.google.com/file/d/1I2yRb2tD8fQ5r6hNvHgy1iYfFGOaAPfB/preview" allow="autoplay" allowfullscreen></iframe>
+                            </figure>
+                            <!-- <figure>
+                                <figcaption class="VidCaption">Character Controls Demo</figcaption>
+                                <video controls preload="metadata">
+                                    <source src="Assets/Videos/Project (RPG Core Mechanic)/The Forest - RPG Core Mechanic.mp4" type="video/mp4">
+                                    Your browser doesn't support video.
+                                </video>
+                            </figure> -->
+                        </div>
+
                         <div class="ProjectDesc">
                             <h7>
                                 This project is a protoype for a core mechanic for an RPG game. The feature in this project are, third person movement + jumping ability, basic attack, skill mechanic,
@@ -539,17 +743,13 @@
                             </h7>
                         </div>
                         
-                        <!-- Project Vid -->
-                        <div class="ProjectVidBox_ODD d-flex justify-content-center">
-                            <iframe class="ProjectVid" src="https://drive.google.com/file/d/1I2yRb2tD8fQ5r6hNvHgy1iYfFGOaAPfB/preview" width="800" height="400" allow="autoplay" allowfullscreen></iframe>
-                        </div>
                     </div>
                 </div>
 
                 <!-- Project CumiAsik -->
-                <div class="d-flex ustify-content-start flex-column mb-4">
+                <div class="d-flex flex-column mb-4">
                     <!-- Project Name -->
-                    <div class="ProjectNameBox_EVEN">
+                    <div class="ProjectNameBox">
                         <h2 class="ProjectName">Cumi Asik</h2>
                     </div>
                     
@@ -563,13 +763,13 @@
                             </div>
                             <div class="carousel-inner">
                               <div class="carousel-item active">
-                                <img class="ProjectImage" src="Assets/Images/Project (CumiAsik)/Logo CUMI.png" class="d-block w-100" alt="ImgLogo">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (CumiAsik)/Logo CUMI.png" alt="ImgLogo">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (CumiAsik)/Preview 1.png" class="d-block w-100" alt="ImgPreview1">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (CumiAsik)/Preview 1.png" alt="ImgPreview1">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (CumiAsik)/Preview 3.png" class="d-block w-100" alt="ImgPreview3">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (CumiAsik)/Preview 3.png" alt="ImgPreview3">
                               </div>
                             </div>
     
@@ -585,7 +785,22 @@
                     </div>
 
                     <!-- Project CumiAsik Desc -->
-                    <div class="ProjectDescBox d-flex align-items-center">
+                    <div class="ProjectDescBox d-flex flex-column align-items-center">
+                        <!-- Project Vid -->
+                        <div class="ProjectVideos d-flex justify-content-center gap-4 w-100">
+                            <figure>
+                                <figcaption class="VidCaption">Short Gameplay Demo</figcaption>
+                            <iframe class="ProjectVid" src="https://drive.google.com/file/d/1GLTv-DNvbQmmwTIFLwrzecR1GEi9DDzU/preview" allow="autoplay" allowfullscreen></iframe>
+                            </figure>
+                            <!-- <figure>
+                                <figcaption class="VidCaption">Short Gameplay Demo</figcaption>
+                                <video controls preload="metadata">
+                                    <source src="Assets/Videos/Project (CumiAsik)/Cumi Asik Demo.mp4" type="video/mp4">
+                                    Your browser doesn't support video.
+                                </video>
+                            </figure> -->
+                        </div>
+
                         <div class="ProjectDesc">
                             <h7>
                                 Cumi Asik is 2D Platformer Game, where the player play as a squid and fight enemies in the ocean. Player must survive by defeating
@@ -595,10 +810,7 @@
                             </h7>
                         </div>
                         
-                        <!-- Project Vid -->
-                        <div class="ProjectVidBox_EVEN d-flex justify-content-center">
-                            <iframe class="ProjectVid" src="https://drive.google.com/file/d/1GLTv-DNvbQmmwTIFLwrzecR1GEi9DDzU/preview" width="800" height="400" allow="autoplay" allowfullscreen></iframe>
-                        </div>
+                        
                     </div>
 
                     <!-- Download Project CumiAsik Box -->
@@ -613,7 +825,7 @@
                 
                 <!-- Project Monstrum -->
                 <div class="d-flex flex-column mb-4">
-                    <div class="ProjectNameBox_ODD">
+                    <div class="ProjectNameBox">
                         <h2 class="ProjectName">Monstrum: Cult of Astray</h2>
                     </div>
 
@@ -628,13 +840,13 @@
                             
                             <div class="carousel-inner">
                               <div class="carousel-item active" >
-                                <img class="ProjectImage" src="Assets/Images/Project (Monstrum - Cult of Astray)/Main Menu.png" class="d-block w-100" alt="ImgMainMenu">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (Monstrum - Cult of Astray)/Main Menu.png" alt="ImgMainMenu">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (Monstrum - Cult of Astray)/Game Scene.png" class="d-block w-100" alt="ImgGameScene">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (Monstrum - Cult of Astray)/Game Scene.png" alt="ImgGameScene">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (Monstrum - Cult of Astray)/Conversation Scene.png" class="d-block w-100" alt="ImgConversationScene">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (Monstrum - Cult of Astray)/Conversation Scene.png" alt="ImgConversationScene">
                               </div>
                             </div>
     
@@ -651,10 +863,20 @@
                     </div>
 
                     <!-- Project Monstrum Desc -->
-                    <div class="ProjectDescBox d-flex align-items-center">
+                    <div class="ProjectDescBox d-flex flex-column align-items-center">
                         <!-- Project Vid -->
-                        <div class="ProjectVidBox_ODD d-flex justify-content-center">
-                            <iframe class="ProjectVid" src="https://drive.google.com/file/d/1sOYTgzntXQA3DxveUUztum1QER0RVP9w/preview" width="800" height="400" allow="autoplay" allowfullscreen></iframe>
+                        <div class="ProjectVideos d-flex justify-content-center gap-4 w-100">
+                            <figure>
+                                <figcaption class="VidCaption">Monstrum Cult of Astray Trailer</figcaption>
+                            <iframe class="ProjectVid" src="https://drive.google.com/file/d/1sOYTgzntXQA3DxveUUztum1QER0RVP9w/preview" allow="autoplay" allowfullscreen></iframe>
+                            </figure>
+                            <!-- <figure>
+                                <figcaption class="VidCaption">Monstrum Cult of Astray Trailer</figcaption>
+                                <video controls preload="metadata">
+                                    <source src="Assets/Videos/Project (Monstrum - Cult of Astray)/Monstrum Cult of Astray Trailer.mp4" type="video/mp4">
+                                    Your browser doesn't support video.
+                                </video>
+                            </figure> -->
                         </div>
                         
                         <div class="ProjectDesc">
@@ -683,7 +905,7 @@
                 <!-- Project VR360 -->
                 <div class="d-flex ustify-content-start flex-column mb-4">
                     <!-- Project Name -->
-                    <div class="ProjectNameBox_EVEN">
+                    <div class="ProjectNameBox">
                         <h2 class="ProjectName">VR 360 Video (Android)</h2>
                     </div>
                     
@@ -697,13 +919,13 @@
                             </div>
                             <div class="carousel-inner">
                               <div class="carousel-item active">
-                                <img class="ProjectImage" src="Assets/Images/Project (VR 360 Vid)/VR 360 Vid - Main Menu.jpg" class="d-block w-100" alt="ImgMainMenu">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (VR 360 Vid)/VR 360 Vid - Main Menu.jpg" alt="ImgMainMenu">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (VR 360 Vid)/VR 360 Vid - Vid Controls.jpg" class="d-block w-100" alt="ImgVidCtrl">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (VR 360 Vid)/VR 360 Vid - Vid Controls.jpg" alt="ImgVidCtrl">
                               </div>
                               <div class="carousel-item">
-                                <img class="ProjectImage" src="Assets/Images/Project (VR 360 Vid)/VR 360 Vid - Vid Thumbnails.jpg" class="d-block w-100" alt="ImgVidThumbnail">
+                                <img class="ProjectImage d-block mx-auto" src="Assets/Images/Project (VR 360 Vid)/VR 360 Vid - Vid Thumbnails.jpg" alt="ImgVidThumbnail">
                               </div>
                             </div>
     
@@ -719,7 +941,22 @@
                     </div>
 
                     <!-- Project VR360 Desc -->
-                    <div class="ProjectDescBox d-flex align-items-center">
+                    <div class="ProjectDescBox d-flex flex-column align-items-center">
+                        <!-- Project Vid -->
+                        <div class="ProjectVideos d-flex justify-content-center gap-4 w-100">
+                            <figure>
+                                <figcaption class="VidCaption">VR 360 Gameplay Demo</figcaption>
+                            <iframe class="ProjectVid" src="https://drive.google.com/file/d/1zGedIkUrc46N2EpT5uAFAiF2yjpZ4mna/preview" allow="autoplay" allowfullscreen></iframe>
+                            </figure>
+                             <!-- <figure>
+                                <figcaption class="VidCaption">VR 360 Gameplay Demo</figcaption>
+                                <video controls preload="metadata">
+                                    <source src="Assets/Videos/Project (VR 360 Vid)/VR 360 Vid Demo.mp4" type="video/mp4">
+                                    Your browser doesn't support video.
+                                </video>
+                            </figure> -->
+                        </div>
+
                         <div class="ProjectDesc">
                             <h7>
                                 VR 360 Video is a game where the main purpose is to simulate a VR 360 video in android platform. To simulate the VR experience, the control to
@@ -730,10 +967,6 @@
                             </h7>
                         </div>
                         
-                        <!-- Project Vid -->
-                        <div class="ProjectVidBox_EVEN d-flex justify-content-center">
-                            <iframe class="ProjectVid" src="https://drive.google.com/file/d/1zGedIkUrc46N2EpT5uAFAiF2yjpZ4mna/preview" width="800" height="400" allow="autoplay" allowfullscreen></iframe>
-                        </div>
                     </div>
 
                     <!-- Download Project VR360 Box -->
